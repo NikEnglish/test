@@ -1,100 +1,37 @@
-/* Основные стили */
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-.maze-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Стили для заголовка */
-.maze-header {
-    margin-bottom: 2rem;
     text-align: center;
+    background: #f4f4f4;
 }
 
-.maze-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+.container {
+    margin: 20px auto;
+    width: 300px;
 }
 
-.maze-stats {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-/* Стили для лабиринта */
-.maze-grid {
+#maze {
     display: grid;
-    gap: 2px;
-    padding: 1rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    grid-template-columns: repeat(8, 40px); /* Добавили это */
-    grid-auto-rows: 40px; /* Добавили это */
+    gap: 5px;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .cell {
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 5px;
 }
 
-.wall {
-    background-color: #4f46e5;
-}
+.wall { background: black; }
+.path { background: white; }
+.player { background: green; }
+.goal { background: blue; }
 
-.player {
-    background-color: #22c55e;
-}
-
-.target {
-    background-color: #3b82f6;
-}
-
-/* Стили для кнопок управления */
-.controls {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    max-width: 200px;
-}
-
-.control-button {
-    padding: 1rem;
-    font-size: 1.5rem;
-    border-radius: 8px;
-    background-color: #ffffff;
-    border: 2px solid #4f46e5;
-    cursor: pointer;
-    transition: transform 0.1s;
-}
-
-.control-button:active {
-    transform: scale(0.95);
-}
-
-/* Адаптивный дизайн */
-@media (max-width: 480px) {
-    .cell {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .control-button {
-        padding: 0.8rem;
-        font-size: 1.2rem;
-    }
+#controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    margin: 5px;
 }
